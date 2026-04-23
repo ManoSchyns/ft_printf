@@ -6,7 +6,7 @@
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 13:24:08 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/23 15:57:39 by mschyns          ###   ########.fr       */
+/*   Updated: 2026/04/23 16:02:05 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ int	ft_printf(const char *format, ...)
 			printed_count += ft_putchar(format[i]);
 		i ++;
 	}
+	va_end(args);
 	return (printed_count);
 }
