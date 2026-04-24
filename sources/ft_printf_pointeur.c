@@ -1,47 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_decimal.c                                :+:      :+:    :+:   */
+/*   ft_printf_pointeur.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/23 15:23:32 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/24 10:44:34 by mschyns          ###   ########.fr       */
+/*   Created: 2026/04/24 08:28:19 by mschyns           #+#    #+#             */
+/*   Updated: 2026/04/24 10:44:59 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_decimal.h"
+#include "ft_printf_pointeur.h"
 
-int	ft_putnbr(int nbr)
+static int	ft_puthexa_long(unsigned long n)
 {
-	long	n;
+	int		count;
 	char	c;
-	int		add;
+	char	*base;
 
-	add = 1;
-	n = (long) nbr;
-	if (n < 0)
-	{
-		n *= -1;
-		write (1, "-", 1);
-		add += 1;
-	}
-	if (n >= 10)
-		add += ft_putnbr(n / 10);
-	c = n % 10 + '0';
+	base = "0123456789abcdef";
+	count = 1;
+	if (n >= 16)
+		count += ft_puthexa_long(n / 16);
+	c = base[n % 16];
 	write (1, &c, 1);
-	return (add);
+	return (count);
 }
 
-int	ft_unsigned_putnbr(unsigned int nbr)
+int	ft_put_pointeur(void *p)
 {
-	char	c;
-	int		add;
+	unsigned long	adress;
 
-	add = 1;
-	if (nbr >= 10)
-		add += ft_putnbr(nbr / 10);
-	c = nbr % 10 + '0';
-	write (1, &c, 1);
-	return (add);
+	if (p == NULL)
+	{
+		write (1, "(nil)", 5);
+		return (5);
+	}
+	write(1, "0x", 2);
+	adress = (unsigned long)p;
+	return (2 + ft_puthexa_long(adress));
 }

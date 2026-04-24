@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_char.c                                   :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/23 13:24:24 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/24 10:44:27 by mschyns          ###   ########.fr       */
+/*   Created: 2026/04/23 13:24:11 by mschyns           #+#    #+#             */
+/*   Updated: 2026/04/24 10:44:02 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_char.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	ft_putchar(int c)
-{
-	write(1, &c, 1);
-	return (1);
-}
+# include "ft_printf_parsing.h"
+
+int	ft_printf(const char *format, ...);
+
+#endif
