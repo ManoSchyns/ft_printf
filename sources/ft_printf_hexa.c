@@ -6,12 +6,11 @@
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 08:28:24 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/24 10:44:45 by mschyns          ###   ########.fr       */
+/*   Updated: 2026/04/27 10:54:18 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_hexa.h"
-#include "ft_printf_string.h"
+#include "ft_printf.h"
 
 static int	get_base_size(char *base)
 {

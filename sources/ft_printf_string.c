@@ -6,11 +6,11 @@
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 13:24:13 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/24 10:45:04 by mschyns          ###   ########.fr       */
+/*   Updated: 2026/04/27 10:54:10 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_string.h"
+#include "ft_printf.h"
 
 int	ft_putstr(const char *str)
 {

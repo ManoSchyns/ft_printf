@@ -25,7 +25,7 @@ This project is a copy of printf for conversions:
 
 **During compilation, run the program as follows:**
 
-	 cc fichier.c -L. -lftprintf -Iheaders
+	 cc fichier.c -L. -lftprintf
 
 **file.c is your program that uses ft_printf**
 
