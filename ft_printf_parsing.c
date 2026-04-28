@@ -6,7 +6,7 @@
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 09:55:19 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/27 10:54:14 by mschyns          ###   ########.fr       */
+/*   Updated: 2026/04/28 09:04:50 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static int	apply_format(int c, va_list *elem)
 	return (0);
 }
 
-int	parsing(const char *format, va_list *args)
+int	ft_parsing(const char *format, va_list *args)
 {
 	int	i;
 	int	printed_count;

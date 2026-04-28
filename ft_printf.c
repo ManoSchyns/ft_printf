@@ -6,7 +6,7 @@
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 13:24:08 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/24 10:01:33 by mschyns          ###   ########.fr       */
+/*   Updated: 2026/04/28 09:08:01 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_printf(const char *format, ...)
 	int		printed_count;
 
 	va_start(args, format);
-	printed_count = parsing(format, &args);
+	printed_count = ft_parsing(format, &args);
 	va_end(args);
 	return (printed_count);
 }

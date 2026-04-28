@@ -1,12 +1,12 @@
 NAME = libftprintf.a
-SRC = ft_printf.c sources/ft_printf_parsing.c sources/ft_printf_char.c sources/ft_printf_string.c  sources/ft_printf_decimal.c sources/ft_printf_hexa.c sources/ft_printf_pointeur.c
+SRC = ft_printf.c ft_printf_parsing.c ft_printf_char.c ft_printf_string.c  ft_printf_decimal.c ft_printf_hexa.c ft_printf_pointeur.c
 OBJ = $(SRC:.c=.o)
-FLAGS = -Wall -Wextra -Werror -I.
+FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 %.o: %.c
 	cc -c $(FLAGS) $< -o $@

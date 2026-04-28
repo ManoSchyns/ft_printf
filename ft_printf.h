@@ -6,7 +6,7 @@
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 13:24:11 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/27 10:52:53 by mschyns          ###   ########.fr       */
+/*   Updated: 2026/04/28 09:05:20 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 # define FT_PRINTF_H
 
 # include <unistd.h>
-# include <stdlib.h>
 # include <stdarg.h>
 
 int	ft_printf(const char *format, ...);
 int	ft_putstr(const char *str);
 int	ft_put_pointeur(void *p);
-int	parsing(const char *format, va_list *args);
+int	ft_parsing(const char *format, va_list *args);
 int	ft_putnbr_base(unsigned int nbr, char *base);
 int	ft_putnbr(int nbr);
 int	ft_putchar(int c);
